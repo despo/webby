@@ -12,15 +12,15 @@ rescue LoadError
 end
 
 require 'fileutils'
-require 'spec'
-require 'spec/logging_helper'
+require 'rspec'
+#require 'rspec/logging_helper'
 
 dir = File.expand_path(File.dirname(__FILE__))
 require File.join(dir, %w[.. lib webby])
 Dir.glob(File.join(dir, %w[helpers *_helper.rb])).each {|fn| require fn}
 
-Spec::Runner.configure do |config|
-  include Spec::LoggingHelper
+RSpec.configure do |config|
+  #include Spec::LoggingHelper
   include WebbyHelper
 
   # == Mock Framework
@@ -32,7 +32,7 @@ Spec::Runner.configure do |config|
   # config.mock_with :flexmock
   # config.mock_with :rr
 
-  config.capture_log_messages :from => 'Webby'
+  #config.capture_log_messages :from => 'Webby'
   config.webby_site_setup
 end
 
