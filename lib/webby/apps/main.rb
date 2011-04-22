@@ -211,7 +211,7 @@ class Main
     args.page << ext unless ext.empty?
 
     ::Webby.site.args = args
-    Object.const_set(:SITE, Webby.site)
+    Object.const_set(:SITE, Webby.site) unless Object.const_defined? :SITE
     args
   end
 

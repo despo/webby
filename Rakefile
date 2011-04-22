@@ -50,7 +50,7 @@ ANN
   depend_on 'loquacious'
   depend_on 'rake'
 
-  depend_on 'rspec', :development => true
+  depend_on 'rspec', '2.5.0', :development => true
   depend_on 'bones-git', :development => true
   depend_on 'bones-extras', :development => true
 }
