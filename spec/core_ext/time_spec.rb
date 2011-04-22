@@ -9,7 +9,7 @@ describe Time do
 
     utc_offset = now.utc_offset / 3600
     sign, utc_offset = utc_offset < 0 ? ['-', -utc_offset] : ['', utc_offset]
-    str = "%s.%06d %s%02d:00" %
+    str = "%s.%06d +%s%02d:00" %
           [now.strftime('%Y-%m-%d %H:%M:%S'), now.usec, sign, utc_offset]
 
     now.to_y.should == str

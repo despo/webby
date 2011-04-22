@@ -217,7 +217,7 @@ describe Webby::Resources::DB do
         'Mad City Chickens',
         'Historical Perspectives on the Classic Chicken Joke',
         'Up a Tree'
-      ]
+      ].sort
     end
 
     it 'can combine all these options' do
