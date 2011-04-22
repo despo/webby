@@ -81,7 +81,7 @@ describe Webby::Apps::Generator do
       "templates/blog/year.erb",
       "templates/blog/post.erb",
       "templates/blog/month.erb"
-    ]
+    ].sort
   end
 
   describe "when parsing command line arguments" do
